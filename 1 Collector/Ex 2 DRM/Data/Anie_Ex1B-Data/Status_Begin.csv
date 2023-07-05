@@ -1,2 +1,0 @@
-Username,ID,Date,Session,Condition_Number,Condition_Description,Output_File,Stimuli_File,Procedure_File,Browser,DeviceType,OS,IP
-TEST,qbfa6edpjq,2021-04-06T14:52:55+00:00,1,1,"Version A",Output_Session1_TEST_qbfa6edpjq.csv,Stim_A.csv,VersionA.csv,"Firefox Generic",Desktop,Win10,10.0.13.130
