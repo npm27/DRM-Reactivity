@@ -14,8 +14,6 @@
 
 <div class="study">
     <span class="study-left"   ><?php echo $cue;    ?></span>
-    <span class="study-divider"><?php echo ":";     ?></span>
-    <span class="study-right"  ><?php echo $answer; ?></span>
     <br>
 
 <br>

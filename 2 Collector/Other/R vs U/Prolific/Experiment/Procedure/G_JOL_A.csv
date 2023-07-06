@@ -64,7 +64,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle,
 0,Instruct,User,2.5,You have completed this section. Please click next.,,Instruct166,
 0,FreeRecall,120,120,Please list the 50 US States in alphabetical order. The computer will automatically advance to the next screen in 2 minutes.,,FILLER,
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166,
-0,Instruct,User,10,"Your memory will now be tested. You will be presented with a series of words. If the word on the screen was previously studied, please select YES. If the word was not studied, select NO. PLEASE DO NOT SKIP ITEMS! Click next when you are ready to begin.",,,
+0,Instruct,User,10,"Your memory will now be tested. You will be presented with a series of words. If the word on the screen was previously studied, please select YES. If the word was not studied, select NO. PLEASE DO NOT SKIP ITEMS! Click next when you are ready to begin.",,Instruct_stuff,
 50,Likert,User,1,Was this item previously studied? ,List Item Sans F,Recog,1::2
 51,Likert,User,1,Was this item previously studied? ,List Item Sans F,Recog,1::2
 52,Likert,User,1,Was this item previously studied? ,List Item Sans F,Recog,1::2
