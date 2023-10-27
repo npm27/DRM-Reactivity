@@ -1,10 +1,9 @@
 <section class="instructions">
     <h2 class="textcenter">Task Instructions</h2>
     <!-- ## SET ## Change the instructions text to match your task.-->
-    <p> In this study, you will be presented with a list of word</p>
+    <p> In this study, you will be presented with a list of words.</p>
     <p> You will be asked to study each word. Please pay attention -- your memory will be tested!</p>
     <p> Please close out of any other open windows/browser tabs! </p>
-    <p> BEFORE STARTING: MAKE SURE TO NOTE WHAT TIME IT IS RIGHT NOW! You will be asked to provide this information at the end of the study! </p>
     <p> Please click advance when you are ready to continue. </p>
 
     <div class="textcenter" id="revealRC">
