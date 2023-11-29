@@ -4,10 +4,9 @@ read = read.csv("Data/Control Group.csv")
 iJOL = read.csv("Data/JOL Item.csv")
 gJOL = read.csv("Data/JOL Global.csv")
 
-##combine
-read = read[ , -c(3:4)]
-iJOL = iJOL[ , -c(3:4)]
-gJOL = gJOL[ , -c(3:4)]
+colnames(read)[2] = "Item_type"
+colnames(iJOL)[2] = "Item_type"
+colnames(gJOL)[2] = "Item_type"
 
 dat = rbind(read, iJOL, gJOL)
 
@@ -20,40 +19,29 @@ library(psychReport)
 options(scipen = 999)
 
 ####Check the data####
-gJOL.wide = cast(gJOL[ , c(1, 3, 5)], Username ~ Direction, mean)
-iJOL.wide = cast(iJOL[ , c(1, 3, 5)], Username ~ Direction, mean)
-read.wide = cast(read[ , c(1, 3, 5)], Username ~ Direction, mean)
+gJOL.wide = cast(gJOL, Username ~ Item_type, mean)
+iJOL.wide = cast(iJOL, Username ~ Item_type, mean)
+read.wide = cast(read, Username ~ Item_type, mean)
 
 #read
-read = subset(read,
-              read$Username != "20291142" | read$Username != "M20303251_AAR" | read$Username != "M20304460_DNI" |
-              read$Username != "M20322322") #recog @ 100%
 
 #global
 #none so far
 
 #item
 iJOL = subset(iJOL,
-              iJOL$Username != "M20265302_MJL") #recog @ 100%
-
-iJOL = subset(iJOL,
-              iJOL$Username != "M20331476") #too many false alarms
-
+              iJOL$Username != "HayleyGardner") #Poor performance
 
 ####Get descriptives####
 ##presented 
-presented = subset(dat, dat$Direction != "Control")
+presented = subset(dat, dat$Item_type == "List Item")
 
-tapply(presented$scored, list(presented$Encoding, presented$Direction), mean)
+tapply(presented$scored, presented$encoding, mean)
 
-##false recognition of control items
-control = subset(dat, dat$Direction == "Control")
+##false recognition of critical lures
+CL = subset(dat, dat$Item_type == "Critical Lure")
 
-#invert
-control$scored = (control$scored - 1) * -1
-
-#false alarms
-tapply(control$scored, control$Encoding, mean) #lowest for items, highest for Read, probably not sig though
+tapply(CL$scored, CL$encoding, mean)
 
 ####Run the ANOVA####
 ##presented
