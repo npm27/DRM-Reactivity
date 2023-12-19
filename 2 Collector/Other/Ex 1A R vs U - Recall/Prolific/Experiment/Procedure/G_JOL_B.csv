@@ -1,0 +1,85 @@
+Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
+0,Instruct,-,5,"In this section, you will be presented with a series of words. Please study each word carefully. Your memory will be tested!",Initial_Instruct,Instruct1
+0,Instruct,User,5,"After studying each LIST of words, you will be asked to rate your ability to remember ALL of the words in the list on a later test. You will make these ratings using a scale of 0 to 100. A rating of 0 = WILL NOT REMEMBER, while a rating of 100 = WILL DEFINITELY REMEMBER. Please try to be as accurate as possible with these ratings! ",,BLIPBLOOP
+0,Instruct,User,-,You will now begin the study. Click next when you are ready to begin.,,Instruct16
+2,Study,User,-,,Related,R1
+3,Study,User,-,,Related,R1
+4,Study,User,-,,Related,R1
+5,Study,User,-,,Related,R1
+6,Study,User,-,,Related,R1
+7,Study,User,-,,Related,R1
+8,Study,User,-,,Related,R1
+9,Study,User,-,,Related,R1
+10,Study,User,-,,Related,R1
+11,Study,User,-,,Related,R1
+12,Study,User,-,,Related,R1
+13,Study,User,-,,Related,R1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,JOL_GLOBAL,5,5,,Related,JOL1
+0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
+0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""K"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
+0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
+14,Study,User,-,,Unrelated,U1
+15,Study,User,-,,Unrelated,U1
+16,Study,User,-,,Unrelated,U1
+17,Study,User,-,,Unrelated,U1
+18,Study,User,-,,Unrelated,U1
+19,Study,User,-,,Unrelated,U1
+20,Study,User,-,,Unrelated,U1
+21,Study,User,-,,Unrelated,U1
+22,Study,User,-,,Unrelated,U1
+23,Study,User,-,,Unrelated,U1
+24,Study,User,-,,Unrelated,U1
+25,Study,User,-,,Unrelated,U1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,JOL_GLOBAL,5,5,,Unrelated,JOL2
+0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
+0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""L"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
+0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
+26,Study,User,-,,Related,R2
+27,Study,User,-,,Related,R2
+28,Study,User,-,,Related,R2
+29,Study,User,-,,Related,R2
+30,Study,User,-,,Related,R2
+31,Study,User,-,,Related,R2
+32,Study,User,-,,Related,R2
+33,Study,User,-,,Related,R2
+34,Study,User,-,,Related,R2
+35,Study,User,-,,Related,R2
+36,Study,User,-,,Related,R2
+37,Study,User,-,,Related,R2
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,JOL_GLOBAL,5,5,,Related,JOL3
+0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
+0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""M"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
+0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
+38,Study,User,-,,Unrelated,U2
+39,Study,User,-,,Unrelated,U2
+40,Study,User,-,,Unrelated,U2
+41,Study,User,-,,Unrelated,U2
+42,Study,User,-,,Unrelated,U2
+43,Study,User,-,,Unrelated,U2
+44,Study,User,-,,Unrelated,U2
+45,Study,User,-,,Unrelated,U2
+46,Study,User,-,,Unrelated,U2
+47,Study,User,-,,Unrelated,U2
+48,Study,User,-,,Unrelated,U2
+49,Study,User,-,,Unrelated,U2
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,JOL_GLOBAL,5,5,,Unrelated,JOL4
+0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
+0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""M"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
+0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,-,You have completed this section. Please click next.,,Instruct7
+0,Instruct,User,-,The following screen will ask you a few questions abour your experience today. You must complete these questions to receive credit.,,Instruct8

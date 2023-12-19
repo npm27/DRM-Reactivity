@@ -1,0 +1,10 @@
+Username,ID,Date,Session,Condition_Number,Condition_Description,Output_File,Stimuli_File,Procedure_File,Browser,DeviceType,OS,IP
+TEST,dhfezxnqug,2021-03-25T19:47:46+00:00,1,1,"Version A",Output_Session1_TEST_dhfezxnqug.csv,Stim_A.csv,VersionA.csv,"Firefox Generic",Desktop,Win10,10.0.13.131
+Test,5ty6xagckt,2021-03-25T19:56:25+00:00,1,2,"Version B",Output_Session1_Test_5ty6xagckt.csv,Stim_B.csv,VersionB.csv,"Firefox Generic",Desktop,Win10,10.0.13.131
+test,juhmdkivbj,2021-03-29T19:01:07+00:00,1,3,"Version C",Output_Session1_test_juhmdkivbj.csv,Stim_C.csv,VersionC.csv,"Firefox Generic",Desktop,Win10,10.0.13.131
+test,52edrdkrra,2021-03-31T15:17:16+00:00,1,4,"Version D",Output_Session1_test_52edrdkrra.csv,Stim_D.csv,VersionD.csv,"Firefox Generic",Desktop,Win10,10.0.13.130
+TEST,mv691fa8d2,2021-03-31T15:19:37+00:00,1,1,"Version A",Output_Session1_TEST_mv691fa8d2.csv,Stim_A.csv,VersionA.csv,"Firefox Generic",Desktop,Win10,10.0.13.130
+ADFADSF,ppuisak0x3,2021-03-31T15:20:23+00:00,1,2,"Version B",Output_Session1_ADFADSF_ppuisak0x3.csv,Stim_B.csv,VersionB.csv,"Firefox Generic",Desktop,Win10,10.0.13.130
+HuffTest1,nexpx6jn4t,2021-04-05T21:03:16+00:00,1,3,"Version C",Output_Session1_HuffTest1_nexpx6jn4t.csv,Stim_C.csv,VersionC.csv,"Chrome Generic",Desktop,Win10,10.0.13.131
+test,yl0h1xbvad,2021-04-06T14:28:42+00:00,1,4,"Version D",Output_Session1_test_yl0h1xbvad.csv,Stim_D.csv,VersionD.csv,"Firefox Generic",Desktop,Win10,10.0.13.130
+TEST,wg4i3svzgw,2021-04-06T14:45:37+00:00,1,1,"Version A",Output_Session1_TEST_wg4i3svzgw.csv,Stim_A.csv,VersionA.csv,"Firefox Generic",Desktop,Win10,10.0.13.130
