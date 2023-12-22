@@ -4,10 +4,10 @@ Number,Stimuli,Procedure,Condition Description,Condition Notes
 3,Stim_A.csv,G_JOL_B.csv,Global C,Global
 4,Stim_B.csv,G_JOL_B.csv,Global D,Global
 5,Stim_A.csv,I_JOL_A.csv,Item A,Item
-6,Stim_B.csv,I_JOL_A.csv,Item B,Item
-7,Stim_A.csv,I_JOL_B.csv,Item C,Item
-8,Stim_B.csv,I_JOL_B.csv,Item D,Item
-9,Stim_A.csv,Read_A.csv,Read A,Read
-10,Stim_B.csv,Read_A.csv,Read B,Read
-11,Stim_A.csv,Read_B.csv,Read C,Read
-12,Stim_B.csv,Read_B.csv,Read D,Read
+6,Stim_B.csv,I_JOL_A.csv,#Item B,Item
+7,Stim_A.csv,I_JOL_B.csv,#Item C,Item
+8,Stim_B.csv,I_JOL_B.csv,#Item D,Item
+9,Stim_A.csv,Read_A.csv,#Read A,Read
+10,Stim_B.csv,Read_A.csv,#Read B,Read
+11,Stim_A.csv,Read_B.csv,#Read C,Read
+12,Stim_B.csv,Read_B.csv,#Read D,Read
