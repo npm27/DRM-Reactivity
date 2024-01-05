@@ -8,8 +8,8 @@ options(scipen = 999)
 
 #load libraries
 library(ez)
+library(psychReport)
 
-####Ex 2####
 ###Make Encoding group Subsets
 iJOL = subset(ex1,
               ex1$e == "Item_JOL")
@@ -19,7 +19,7 @@ Read = subset(ex1,
               ex1$e == "Read")
 
 ###get means
-mean(iJOL$dprime); mean(gJOL$dprime); mean(Read$dprime) #2.76 vs. 1.98 vs. 1.91
+mean(iJOL$dprime); mean(gJOL$dprime); mean(Read$dprime) #2.76 vs. 1.98 vs. 1.64
 mean(iJOL$c.1); mean(gJOL$c.1); mean(Read$c.1) #.03 vs. .22 vs. .16  
 
 #get sds
@@ -28,12 +28,18 @@ sd(iJOL$c.1); sd(gJOL$c.1); sd(Read$c.1)
 
 ##d'
 #ANOVA
-ezANOVA(ex1,
+model1 = ezANOVA(ex1,
         wid = i,
         between = e,
         dv = dprime,
         type = 3,
         detailed = T) #sig
+
+#get MSE here
+model1$ANOVA$MSE = model1$ANOVA$SSd/model1$ANOVA$DFd
+model1$ANOVA$MSE
+
+aovEffectSize(model1, effectSize = "pes")
 
 #post hoc
 temp = t.test(iJOL$dprime, gJOL$dprime, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
@@ -41,6 +47,10 @@ temp
 round(temp$p.value, 3)
 temp$statistic #sig!
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+
+#get d
+mean(iJOL$dprime); mean(gJOL$dprime)
+sd(iJOL$dprime); sd(gJOL$dprime)
 
 temp = t.test(iJOL$dprime, Read$dprime, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
@@ -54,15 +64,37 @@ round(temp$p.value, 3)
 temp$statistic #non-sig
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 
+#get pbic
+pbic1 = gJOL[ , c(1, 7)]
+pbic2 = Read[ , c(1, 7)]
+
+pbic1$encoding = rep("global")
+pbic2$encoding = rep("read")
+
+pbic3 = rbind(pbic1, pbic2)
+
+ezANOVA(pbic3,
+        wid = i,
+        dv = dprime,
+        between = encoding,
+        type = 3,
+        detailed = T)
+
 #Only Item JOLs improve discriminability
 
 ##C
-ezANOVA(ex1,
+model2 = ezANOVA(ex1,
         wid = i,
         between = e,
         dv = c.1,
         type = 3,
         detailed = T) #marginal
+
+#get MSE here
+model2$ANOVA$MSE = model2$ANOVA$SSd/model2$ANOVA$DFd
+model2$ANOVA$MSE
+
+aovEffectSize(model2, effectSize = "pes")
 
 temp = t.test(iJOL$c.1, gJOL$c.1, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
@@ -101,12 +133,18 @@ sd(iJOL2$c.1); sd(gJOL2$c.1); sd(Read2$c.1)
 
 ###d'
 ##ANOVA
-ezANOVA(ex2_p,
+model3 = ezANOVA(ex2_p,
         wid = i,
         between = e,
         dv = dprime,
         type = 3,
         detailed = T) #marginal
+
+#get MSE here
+model3$ANOVA$MSE = model3$ANOVA$SSd/model3$ANOVA$DFd
+model3$ANOVA$MSE
+
+aovEffectSize(model3, effectSize = "pes")
 
 #post hocs
 temp = t.test(iJOL2$dprime, gJOL2$dprime, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
@@ -115,11 +153,31 @@ round(temp$p.value, 3)
 temp$statistic #marginal
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 
+##get pbic
+pbic1 = gJOL2[ , c(1, 7)]
+pbic2 = iJOL2[ , c(1, 7)]
+
+pbic1$encoding = rep("global")
+pbic2$encoding = rep("ITEM")
+
+pbic3 = rbind(pbic1, pbic2)
+
+ezANOVA(pbic3,
+        wid = i,
+        dv = dprime,
+        between = encoding,
+        type = 3,
+        detailed = T)
+
 temp = t.test(iJOL2$dprime, Read2$dprime, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic #barely sig
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+
+#get means
+mean(iJOL2$dprime); mean(Read2$dprime)
+sd(iJOL2$dprime); sd(Read2$dprime)
 
 temp = t.test(gJOL2$dprime, Read2$dprime, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
@@ -127,33 +185,75 @@ round(temp$p.value, 3)
 temp$statistic #non-sig
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 
+##get pbic
+pbic1 = gJOL2[ , c(1, 7)]
+pbic2 = Read2[ , c(1, 7)]
+
+pbic1$encoding = rep("global")
+pbic2$encoding = rep("read")
+
+pbic3 = rbind(pbic1, pbic2)
+
+ezANOVA(pbic3,
+        wid = i,
+        dv = dprime,
+        between = encoding,
+        type = 3,
+        detailed = T)
+
 ##C
 #ANOVA
-ezANOVA(ex2_p,
+model4 = ezANOVA(ex2_p,
         wid = i,
         between = e,
         dv = c.1,
         type = 3,
         detailed = T) #Sig
 
+#get MSE here
+model4$ANOVA$MSE = model4$ANOVA$SSd/model4$ANOVA$DFd
+model4$ANOVA$MSE
+
+aovEffectSize(model4, effectSize = "pes")
+
 #Post-hocs
 temp = t.test(iJOL2$c.1, gJOL2$c.1, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic #sig!
-(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #No difference in C
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92
+
+#get d
+mean(iJOL2$c.1); mean(gJOL2$c.1)
+sd(iJOL2$c.1); sd(gJOL2$c.1)
 
 temp = t.test(iJOL2$c.1, Read2$c.1, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic #sig!
-(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #No difference in C
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92
 
 temp = t.test(gJOL2$c.1, Read2$c.1, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic #non-sig
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #No difference in C
+
+#get pbic
+pbic1 = gJOL2[ , c(1, 11)]
+pbic2 = Read2[ , c(1, 11)]
+
+pbic1$encoding = rep("global")
+pbic2$encoding = rep("read")
+
+pbic3 = rbind(pbic1, pbic2)
+
+ezANOVA(pbic3,
+        wid = i,
+        dv = c.1,
+        between = encoding,
+        type = 3,
+        detailed = T)
 
 ####Ex 2 -- False####
 ##Make Encoding group Subsets
@@ -174,40 +274,50 @@ sd(iJOL3$c.1); sd(gJOL3$c.1); sd(Read3$c.1)
 
 ###d'
 ##ANOVA
-ezANOVA(ex2_p,
+model5 = ezANOVA(ex2_f,
         wid = i,
         between = e,
         dv = dprime,
         type = 3,
-        detailed = T) #marginal
+        detailed = T) 
+
+model5$ANOVA$MSE = model5$ANOVA$SSd/model5$ANOVA$DFd
+model5$ANOVA$MSE
+
+aovEffectSize(model5, effectSize = "pes") #non-sig
 
 #post-hocs
 temp = t.test(iJOL3$dprime, gJOL3$dprime, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
-temp$statistic #marginal
+temp$statistic #non-sig
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 
 temp = t.test(iJOL3$dprime, Read3$dprime, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
-temp$statistic #barely sig
+temp$statistic #non sig
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 
 temp = t.test(gJOL3$dprime, Read3$dprime, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
-temp$statistic #non-sig
+temp$statistic #marginal
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 
 ##C
 #ANOVA
-ezANOVA(ex2_p,
+model6 = ezANOVA(ex2_f,
         wid = i,
         between = e,
         dv = c.1,
         type = 3,
         detailed = T) #Sig
+
+model6$ANOVA$MSE = model6$ANOVA$SSd/model6$ANOVA$DFd
+model6$ANOVA$MSE
+
+aovEffectSize(model6, effectSize = "pes") #non-sig
 
 #Post-hocs
 temp = t.test(iJOL3$c.1, gJOL3$c.1, paired = F, p.adjust.methods = "bonferroni", var.equal = T)

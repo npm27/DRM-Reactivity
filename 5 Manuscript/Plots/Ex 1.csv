@@ -1,0 +1,7 @@
+Direction,Task,Average,Upper,Lower
+C,IJOL,0.71,0.75,0.67
+U,IJOL,0.48,0.54,0.42
+C,GJOL,0.76,0.81,0.71
+U,GJOL,0.58,0.65,0.51
+C,Read,0.68,0.72,0.64
+U,Read,0.55,0.6,0.5

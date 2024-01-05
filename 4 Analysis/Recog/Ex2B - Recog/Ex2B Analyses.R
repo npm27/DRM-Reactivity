@@ -58,20 +58,134 @@ control = subset(dat,
 
 ####Run the ANOVA####
 ##presented
-ezANOVA(presented,
+model1 = ezANOVA(presented,
         dv = scored,
         between = encoding,
         wid = Username,
         type = 3,
         detailed = T) #higher correct recognition for item JOLs
 
+#get MSE here
+model1$ANOVA$MSE = model1$ANOVA$SSd/model1$ANOVA$DFd
+model1$ANOVA$MSE
+
+aovEffectSize(model1, effectSize = "pes")
+
+##post-hocs
+#set up the data
+presented.ph = cast(presented, Username ~ encoding, mean)
+
+#global vs item
+temp = t.test(presented.ph$global, presented.ph$item, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
+temp
+round(temp$p.value, 3)
+temp$statistic
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #SIG
+
+#get d's
+mean(presented.ph$global, na.rm = T); mean(presented.ph$item, na.rm = T)
+sd(presented.ph$global, na.rm = T); sd(presented.ph$item, na.rm = T)
+
+#item vs read
+temp = t.test(presented.ph$read, presented.ph$item, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
+temp
+round(temp$p.value, 3)
+temp$statistic
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #SIG
+
+#global vs read
+temp = t.test(presented.ph$read, presented.ph$global, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
+temp
+round(temp$p.value, 3)
+temp$statistic
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #NON SIG
+
+#get pbic
+pbic1 = presented.ph[ , c(1, 2)]
+pbic2 = presented.ph[ , c(1, 4)]
+
+pbic1$encoding = rep("global")
+pbic2$encoding = rep("read")
+
+colnames(pbic1)[2] = "score"
+colnames(pbic2)[2] = "score"
+
+pbic1 = na.omit(pbic1)
+pbic2 = na.omit(pbic2)
+
+pbic3 = rbind(pbic1, pbic2)
+
+ezANOVA(pbic3,
+        wid = Username,
+        dv = score,
+        between = encoding,
+        type = 3,
+        detailed = T)
+
 ##Critical lure items
-ezANOVA(CL,
+model2 = ezANOVA(CL,
         dv = scored,
         between = encoding,
         wid = Username,
         type = 3,
         detailed = T) #higher false recognition of lures for global JOLs
+
+#get MSE here
+model2$ANOVA$MSE = model2$ANOVA$SSd/model2$ANOVA$DFd
+model2$ANOVA$MSE
+
+aovEffectSize(model2, effectSize = "pes")
+
+##post-hocs
+#set up the data
+cl.ph = cast(CL, Username ~ encoding, mean)
+
+#global vs item
+temp = t.test(cl.ph$global, cl.ph$item, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
+temp
+round(temp$p.value, 3)
+temp$statistic
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #SIG
+
+#item vs read
+temp = t.test(cl.ph$read, cl.ph$item, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
+temp
+round(temp$p.value, 3)
+temp$statistic
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Non-SIG
+
+#get pbic
+pbic1 = cl.ph[ , c(1, 3)]
+pbic2 = cl.ph[ , c(1, 4)]
+
+pbic1$encoding = rep("item")
+pbic2$encoding = rep("read")
+
+colnames(pbic1)[2] = "score"
+colnames(pbic2)[2] = "score"
+
+pbic1 = na.omit(pbic1)
+pbic2 = na.omit(pbic2)
+
+pbic3 = rbind(pbic1, pbic2)
+
+ezANOVA(pbic3,
+        wid = Username,
+        dv = score,
+        between = encoding,
+        type = 3,
+        detailed = T)
+
+#global vs read
+temp = t.test(cl.ph$read, cl.ph$global, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
+temp
+round(temp$p.value, 3)
+temp$statistic
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #SIG
+
+#get d's
+mean(cl.ph$global, na.rm = T); mean(cl.ph$read, na.rm = T)
+sd(cl.ph$global, na.rm = T); sd(cl.ph$read, na.rm = T)
 
 #control items
 ezANOVA(control,
@@ -80,11 +194,3 @@ ezANOVA(control,
         wid = Username,
         type = 3,
         detailed = T) #no differences (as expected)
-
-####Run the post-hocs####
-##Presented items
-
-##CL
-tapply(presented$scored, presented$encoding, mean)
-tapply(CL$scored, CL$encoding, mean)
-tapply(control$scored, control$encoding, mean)
