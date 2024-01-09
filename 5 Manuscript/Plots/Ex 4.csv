@@ -1,0 +1,7 @@
+Direction,Task,Average,Upper,Lower
+P,IJOL,0.85,0.87,0.83
+F,IJOL,0.62,0.67,0.57
+P,GJOL,0.76,0.78,0.74
+F,GJOL,0.76,0.8,0.72
+P,Read,0.72,0.74,0.7
+F,Read,0.63,0.68,0.58

@@ -52,9 +52,17 @@ CL = subset(dat, dat$Item_type == "Critical Lure")
 
 tapply(CL$scored, CL$encoding, mean)
 
-##control
+##list item control
 control = subset(dat,
-                 dat$Item_type != "List Item" & dat$Item_type != "Critical Lure")
+                 dat$Item_type == "List Item Control")
+
+tapply(control$scored, control$encoding, mean)
+
+##critical item control
+cl_control = subset(dat,
+                 dat$Item_type == "Critical Lure Control")
+
+tapply(cl_control$scored, cl_control$encoding, mean)
 
 ####Run the ANOVA####
 ##presented
@@ -194,3 +202,13 @@ ezANOVA(control,
         wid = Username,
         type = 3,
         detailed = T) #no differences (as expected)
+
+####get values for Table and Figure####
+(apply(presented.ph, 2, sd, na.rm = T) / sqrt(length(unique(presented.ph$Username)))) * 1.96
+(apply(cl.ph, 2, sd, na.rm = T) / sqrt(length(unique(cl.ph$Username)))) * 1.96
+
+cl2.ph = cast(cl_control, Username ~ encoding, mean)
+control.ph = cast(control, Username ~ encoding, mean)
+
+(apply(cl2.ph, 2, sd, na.rm = T) / sqrt(length(unique(cl2.ph$Username)))) * 1.96
+(apply(control.ph, 2, sd, na.rm = T) / sqrt(length(unique(control.ph$Username)))) * 1.96
