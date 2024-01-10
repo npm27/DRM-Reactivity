@@ -20,7 +20,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""K"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
 14,Study,User,-,,Rough,R1
 15,Study,User,-,,Rough,R2
@@ -40,7 +40,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""L"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
 26,Study,User,-,,Anger,A1
 27,Study,User,-,,Anger,A2
@@ -60,7 +60,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""M"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
 38,Study,User,-,,Trash,T1
 39,Study,User,-,,Trash,T2
@@ -80,7 +80,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""M"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
 50,Study,User,-,,Doctor,D1
 51,Study,User,-,,Doctor,D2
@@ -100,7 +100,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""N"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
 62,Study,User,-,,Slow,S1
 63,Study,User,-,,Slow,S2
@@ -120,7 +120,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""R"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
 74,Study,User,-,,River,RR1
 75,Study,User,-,,River,RR2
@@ -140,7 +140,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""S"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
 86,Study,User,-,,Bread,B1
 87,Study,User,-,,Bread,B2
@@ -160,7 +160,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""T"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
 98,Study,User,-,,Flag,F1
 99,Study,User,-,,Flag,F2
@@ -180,7 +180,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""W"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
 110,Study,User,-,,Shirt,SS1
 111,Study,User,-,,Shirt,SS2
@@ -200,6 +200,6 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""C"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Type as many words as you can from the previous list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct7
 0,Instruct,User,-,The following screen will ask you a few questions abour your experience today. You must complete these questions to receive credit.,,Instruct8
