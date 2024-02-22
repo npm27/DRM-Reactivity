@@ -194,5 +194,3 @@ recog_read = recog_read[ , -c(1, 3:4, 6, 8:13)]
 #write.csv(recog_item, file = "JOL Item.csv", row.names = F)
 #write.csv(recog_global, file = "JOL Global.csv", row.names = F)
 #write.csv(recog_read, file = "Control Group.csv", row.names = F)
-
-####Build JOL data####

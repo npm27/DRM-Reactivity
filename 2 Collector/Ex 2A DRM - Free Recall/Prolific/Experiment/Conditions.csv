@@ -1,5 +1,7 @@
 Number,Stimuli,Procedure,Condition Description,Condition Notes
-1,Stim_A.csv,STANDARD.csv,STANDARD_A,STANDARD_A
-2,Stim_B.csv,STANDARD.csv,STANDARD_B,STANDARD_B
-3,Stim_A.csv,SANS-FORGETICA.csv,SF_A,SF_A
-4,Stim_B.csv,SANS-FORGETICA.csv,SF_B,SF_B
+1,Stim_A.csv,Read.csv,Read,A
+2,Stim_B.csv,Read.csv,Read,B
+3,Stim_A.csv,Global.csv,Global,A
+4,Stim_B.csv,Global.csv,Global,B
+5,Stim_A.csv,Item.csv,Item,A
+6,Stim_B.csv,Item.csv,Item,B

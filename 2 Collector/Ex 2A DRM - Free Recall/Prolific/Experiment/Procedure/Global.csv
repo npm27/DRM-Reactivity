@@ -14,7 +14,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 11,Study,User,-,,Window,Win_10
 12,Study,User,-,,Window,Win_11
 13,Study,User,-,,Window,Win_12
-0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items you just studied. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
 0,JOL_GLOBAL,5,5,,Related,JOL1
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""K"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
@@ -34,7 +34,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 23,Study,User,-,,Rough,R10
 24,Study,User,-,,Rough,R11
 25,Study,User,-,,Rough,R12
-0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items you just studied. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
 0,JOL_GLOBAL,5,5,,Unrelated,JOL2
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""L"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
@@ -54,7 +54,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 35,Study,User,-,,Anger,A10
 36,Study,User,-,,Anger,A11
 37,Study,User,-,,Anger,A12
-0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items you just studied. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
 0,JOL_GLOBAL,5,5,,Related,JOL3
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""M"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
@@ -74,7 +74,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 47,Study,User,-,,Trash,T10
 48,Study,User,-,,Trash,T11
 49,Study,User,-,,Trash,T12
-0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items you just studied. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
 0,JOL_GLOBAL,5,5,,Related,JOL4
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""M"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
@@ -94,7 +94,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 59,Study,User,-,,Doctor,D10
 60,Study,User,-,,Doctor,D11
 61,Study,User,-,,Doctor,D12
-0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items you just studied. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
 0,JOL_GLOBAL,5,5,,Related,JOL5
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""N"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
@@ -114,7 +114,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 71,Study,User,-,,Slow,S10
 72,Study,User,-,,Slow,S11
 73,Study,User,-,,Slow,S12
-0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items you just studied. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
 0,JOL_GLOBAL,5,5,,Related,JOL6
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""R"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
@@ -134,7 +134,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 83,Study,User,-,,River,RR10
 84,Study,User,-,,River,RR11
 85,Study,User,-,,River,RR12
-0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items you just studied. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
 0,JOL_GLOBAL,5,5,,Related,JOL7
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""S"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
@@ -154,7 +154,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 95,Study,User,-,,Bread,B10
 96,Study,User,-,,Bread,B11
 97,Study,User,-,,Bread,B12
-0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items you just studied. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
 0,JOL_GLOBAL,5,5,,Related,JOL8
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""T"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
@@ -174,7 +174,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 107,Study,User,-,,Flag,F10
 108,Study,User,-,,Flag,F11
 109,Study,User,-,,Flag,F12
-0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items you just studied. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
 0,JOL_GLOBAL,5,5,,Related,JOL9
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""W"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
@@ -194,7 +194,7 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 119,Study,User,-,,Shirt,SS10
 120,Study,User,-,,Shirt,SS11
 121,Study,User,-,,Shirt,SS12
-0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
+0,Instruct,User,-,You have completed this section and will now be asked to judge your ability to remember the list items you just studied. You will have four seconds to type your rating. Please click next to continue.,,Next_List1
 0,JOL_GLOBAL,5,5,,Related,JOL10
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""C"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
