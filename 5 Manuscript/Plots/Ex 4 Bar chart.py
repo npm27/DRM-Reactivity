@@ -43,7 +43,7 @@ rects3 = ax1.bar(ind + width + .15, r1_average, width, yerr = r1_conf, capsize =
                 label = 'No-JOL', align = "center")
 
 #Make the plot spiffy
-ax1.set_title('Experiment 4: Recognition Testing', fontsize = 40, fontweight = 'bold')
+ax1.set_title('Experiment 2: DRM Lists', fontsize = 40, fontweight = 'bold')
 ax1.set_ylabel('Mean Prop. "old" Responses', fontsize = 36, fontweight = 'bold')
 ax1.set_xlabel('Item Type', fontsize = 36, fontweight = 'bold')
 #ax1.xaxis.labelpad = 0
@@ -54,4 +54,4 @@ ax1.legend(fontsize = 32)
 ax1.set_ylim([0,1.1])
 
 ##save figure
-#fig.savefig('EX4_chart.png', dip = 10000)
+fig.savefig('EX4_chart.png', dip = 10000)

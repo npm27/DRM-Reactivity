@@ -1,0 +1,242 @@
+####Set up Free Recall data for scoring####
+##Start by gathering all of the data
+#Item JOLs
+setwd("C:/Users/nickm/OneDrive/Documents/GitHub/DRM-Reactivity/3 Output/Ex 2A/Item")
+
+files = list.files(pattern = "*.csv")
+
+#Put them in one dataframe. First apply read.csv, then rbind
+dat = do.call(rbind, lapply(files, function(x) read.csv(x, stringsAsFactors = FALSE)))
+
+#get the number of participants
+length(unique(dat$Username))
+
+#Global JOLs
+setwd("C:/Users/nickm/OneDrive/Documents/GitHub/DRM-Reactivity/3 Output/Ex 2A/Global")
+
+files2 = list.files(pattern = "*.csv")
+
+#Put them in one dataframe. First apply read.csv, then rbind
+dat2 = do.call(rbind, lapply(files2, function(x) read.csv(x, stringsAsFactors = FALSE)))
+
+#get the number of participants
+length(unique(dat2$Username))
+
+#Read
+setwd("C:/Users/nickm/OneDrive/Documents/GitHub/DRM-Reactivity/3 Output/Ex 2A/Read")
+
+files3 = list.files(pattern = "*.csv")
+
+#Put them in one dataframe. First apply read.csv, then rbind
+dat3 = do.call(rbind, lapply(files3, function(x) read.csv(x, stringsAsFactors = FALSE)))
+
+#get the number of participants
+length(unique(dat3$Username))
+
+#Now move back to the original folder
+#This is where I'll store the combined final output for scoring
+setwd('..')
+
+####Clean up the data files####
+##Drop unused columns
+dat = dat[ , -c(2:4, 6:7, 9:10, 20:22, 27:32, 34)]
+dat2 = dat2[ , -c(2:4, 6:7, 9:10, 20:22, 27:32, 34)]
+dat3 = dat3[ , -c(2:4, 6:7, 9:10, 20:22, 27:33)]
+
+#Next remove instruction trials
+dat = subset(dat,
+             dat$Procedure.Trial.Type != "Instruct")
+dat2 = subset(dat2,
+              dat2$Procedure.Trial.Type != "Instruct")
+dat3 = subset(dat3,
+              dat3$Procedure.Trial.Type != "Instruct")
+
+##remove participants who didn't complete filler
+#item
+#dat = subset(dat,
+ #             dat$Username != "5e9402c78b4a3c252eafa204" & dat$Username != "5f2f19107e19512f94ede28b" &
+  #             dat$Username != "62852271a105889fadd8f22d" & dat$Username != "650d93501453a03b44aa1d81" &
+  #             dat$Username != "65a02d7da6ce53dcf5a603ab")
+
+#global
+#dat2 = subset(dat2,
+#              dat2$Username != "5de12fbfe4f42a1842172d7a" & dat2$Username != "5ee1cf1e0df8e55c6b9e1f1a" &
+#              dat2$Username != "65dd6ca1a06e762a792e26f2")
+
+#read
+#dat3 = subset(dat3,
+ #             dat3$Username != "5abe9da9a3ba7a0001b46a18" & dat3$Username != "5ea556346fe116549c336fc9" &
+  #              dat3$Username != "6531340389e363d151089093" & dat3$Username != "657de4e312a15c00fa204959" &
+   #             dat3$Username != "6583773bb83c230e7271378c" & dat3$Username != "65e0f00fbfd8ae75bf44c1ab")
+
+#12 participants failed the filler/manip check *sigh*
+
+#Now remove filler task
+dat = subset(dat,
+             dat$Procedure.Shuffle != "FILLER")
+dat2 = subset(dat2,
+              dat2$Procedure.Shuffle != "FILLER")
+dat3 = subset(dat3,
+              dat3$Procedure.Shuffle != "FILLER")
+
+##get current sample sizes
+length(unique(dat$Username)) #33
+length(unique(dat2$Username)) #32
+length(unique(dat3$Username)) #32
+
+####Set the data up for scoring####
+##build the keys
+unique(dat$Procedure.Procedure.Notes)
+
+Key1 = subset(dat,
+              dat$Procedure.Procedure.Notes == "Window")
+length(unique(Key1$Stimuli.Cue)) #24 (12 items, 1 per counterbalance) #A&C; B&D
+
+Key2 = subset(dat,
+              dat$Procedure.Procedure.Notes == "Rough")
+Key3 = subset(dat,
+              dat$Procedure.Procedure.Notes == "Anger")
+Key4 = subset(dat,
+              dat$Procedure.Procedure.Notes == "Trash")
+Key5 = subset(dat,
+              dat$Procedure.Procedure.Notes == "Doctor")
+Key6 = subset(dat,
+              dat$Procedure.Procedure.Notes == "Slow")
+Key7 = subset(dat,
+              dat$Procedure.Procedure.Notes == "River")
+Key8 = subset(dat,
+              dat$Procedure.Procedure.Notes == "Bread")
+Key9 = subset(dat,
+              dat$Procedure.Procedure.Notes == "Flag")
+Key10 = subset(dat,
+              dat$Procedure.Procedure.Notes == "Shirt")
+
+##Now split out by version
+Key1A = subset(Key1,
+               Key1$Condition.Notes == "A")
+Key1B = subset(Key1,
+               Key1$Condition.Notes == "B")
+
+Key2A = subset(Key2,
+               Key2$Condition.Notes == "A")
+Key2B = subset(Key2,
+               Key2$Condition.Notes == "B")
+
+Key3A = subset(Key3,
+               Key3$Condition.Notes == "A")
+Key3B = subset(Key3,
+               Key3$Condition.Notes == "B")
+
+Key4A = subset(Key4,
+               Key4$Condition.Notes == "A")
+Key4B = subset(Key4,
+               Key4$Condition.Notes == "B")
+
+Key5A = subset(Key5,
+               Key5$Condition.Notes == "A")
+Key5B = subset(Key5,
+               Key5$Condition.Notes == "B")
+
+Key6A = subset(Key6,
+               Key6$Condition.Notes == "A")
+Key6B = subset(Key6,
+               Key6$Condition.Notes == "B")
+
+Key7A = subset(Key7,
+               Key7$Condition.Notes == "A")
+Key7B = subset(Key7,
+               Key7$Condition.Notes == "B")
+
+Key8A = subset(Key8,
+               Key8$Condition.Notes == "A")
+Key8B = subset(Key8,
+               Key8$Condition.Notes == "B")
+
+Key9A = subset(Key9,
+               Key9$Condition.Notes == "A")
+Key9B = subset(Key9,
+               Key9$Condition.Notes == "B")
+
+Key10A = subset(Key10,
+               Key10$Condition.Notes == "A")
+Key10B = subset(Key10,
+               Key10$Condition.Notes == "B")
+
+##Now get the unique items for each key and order them
+Key1A = Key1A[1:12, ];Key1B = Key1B[1:12, ]
+Key2A = Key2A[1:12, ];Key2B = Key2B[1:12, ]
+Key3A = Key3A[1:12, ];Key3B = Key3B[1:12, ]
+Key4A = Key4A[1:12, ];Key4B = Key4B[1:12, ]
+Key5A = Key5A[1:12, ];Key5B = Key5B[1:12, ]
+Key6A = Key6A[1:12, ];Key6B = Key6B[1:12, ]
+Key7A = Key7A[1:12, ];Key7B = Key7B[1:12, ]
+Key8A = Key8A[1:12, ];Key8B = Key8B[1:12, ]
+Key9A = Key9A[1:12, ];Key9B = Key9B[1:12, ]
+Key10A = Key10A[1:12, ];Key10B = Key10B[1:12, ]
+
+#drop unused columns
+Key1A = Key1A[ , -c(1:5, 7, 9:10, 12:17)] 
+Key1B = Key1B[ , -c(1:5, 7, 9:10, 12:17)] 
+
+Key2A = Key2A[ , -c(1:5, 7, 9:10, 12:17)] 
+Key2B = Key2B[ , -c(1:5, 7, 9:10, 12:17)]
+
+Key3A = Key3A[ , -c(1:5, 7, 9:10, 12:17)] 
+Key3B = Key3B[ , -c(1:5, 7, 9:10, 12:17)] 
+
+Key4A = Key4A[ , -c(1:5, 7, 9:10, 12:17)] 
+Key4B = Key4B[ , -c(1:5, 7, 9:10, 12:17)] 
+
+Key5A = Key5A[ , -c(1:5, 7, 9:10, 12:17)] 
+Key5B = Key5B[ , -c(1:5, 7, 9:10, 12:17)] 
+
+Key6A = Key6A[ , -c(1:5, 7, 9:10, 12:17)] 
+Key6B = Key6B[ , -c(1:5, 7, 9:10, 12:17)] 
+
+Key7A = Key7A[ , -c(1:5, 7, 9:10, 12:17)] 
+Key7B = Key7B[ , -c(1:5, 7, 9:10, 12:17)] 
+
+Key8A = Key8A[ , -c(1:5, 7, 9:10, 12:17)] 
+Key8B = Key8B[ , -c(1:5, 7, 9:10, 12:17)] 
+
+Key9A = Key9A[ , -c(1:5, 7, 9:10, 12:17)] 
+Key9B = Key9B[ , -c(1:5, 7, 9:10, 12:17)]
+
+Key10A = Key10A[ , -c(1:5, 7, 9:10, 12:17)] 
+Key10B = Key10B[ , -c(1:5, 7, 9:10, 12:17)] 
+
+##Write keys to file
+#write.csv(Key1A, file = "Keys/Key1A.csv", row.names = F)
+#write.csv(Key1B, file = "Keys/Key1B.csv", row.names = F)
+
+#write.csv(Key2A, file = "Keys/Key2A.csv", row.names = F)
+#write.csv(Key2B, file = "Keys/Key2B.csv", row.names = F)
+
+#write.csv(Key3A, file = "Keys/Key3A.csv", row.names = F)
+#write.csv(Key3B, file = "Keys/Key3B.csv", row.names = F)
+
+#write.csv(Key4A, file = "Keys/Key4A.csv", row.names = F)
+#write.csv(Key4B, file = "Keys/Key4B.csv", row.names = F)
+
+#write.csv(Key5A, file = "Keys/Key5A.csv", row.names = F)
+#write.csv(Key5B, file = "Keys/Key5B.csv", row.names = F)
+
+#write.csv(Key6A, file = "Keys/Key6A.csv", row.names = F)
+#write.csv(Key6B, file = "Keys/Key6B.csv", row.names = F)
+
+#write.csv(Key7A, file = "Keys/Key7A.csv", row.names = F)
+#write.csv(Key7B, file = "Keys/Key7B.csv", row.names = F)
+
+#write.csv(Key8A, file = "Keys/Key8A.csv", row.names = F)
+#write.csv(Key8B, file = "Keys/Key8B.csv", row.names = F)
+
+#write.csv(Key9A, file = "Keys/Key9A.csv", row.names = F)
+#write.csv(Key9B, file = "Keys/Key9B.csv", row.names = F)
+
+#write.csv(Key10A, file = "Keys/Key10A.csv", row.names = F)
+#write.csv(Key10B, file = "Keys/Key10B.csv", row.names = F)
+
+##Write merged data to file
+#write.csv(dat, file = "item.csv", row.names = F)
+#write.csv(dat2, file = "global.csv", row.names = F)
+#write.csv(dat3, file = "Read.csv", row.names = F)

@@ -1,6 +1,7 @@
 ####Set up####
 ##read in data
 dat = read.csv("Data/ex1a.csv")
+dat2 = read.csv("Data/ex1a_fixed.csv")
 
 ##load libraries
 library(reshape)
@@ -13,6 +14,11 @@ options(scipen = 999)
 ##fix column names
 colnames(dat)[1:2] = c("ID", "List_Type")
 colnames(dat)[4] = "scored"
+
+dat2 = dat2[ , c(1, 4:5, 2)]
+
+colnames(dat2)[1:2] = c("ID", "List_Type")
+colnames(dat2)[4] = "scored"
 
 #get ns
 global = subset(dat,
@@ -28,6 +34,8 @@ table(item$ID)
 #remove participant who didn't complete experiment
 dat = subset(dat,
              dat$ID != "653b9ed2c4b3466a16bc6e05")
+dat2 = subset(dat2,
+             dat2 != "653b9ed2c4b3466a16bc6e05")
 
 length(unique(item$ID)) #37 - 1
 
@@ -45,6 +53,7 @@ read.wide = cast(read, ID ~ List_Type, mean) #Nope, finally looks good!
 tapply(dat$scored, dat$encoding, mean) 
 
 tapply(dat$scored, list(dat$encoding, dat$List_Type), mean)
+#tapply(dat2$scored, list(dat2$encoding, dat2$List_Type), mean) #okay, either scoring method works!
 
 model1 = ezANOVA(dat,
         wid = ID,

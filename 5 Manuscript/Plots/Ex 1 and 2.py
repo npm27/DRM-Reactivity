@@ -21,7 +21,7 @@ fig.subplots_adjust(top = .91)
                    
 plt.subplots_adjust(hspace = 0.25)
 
-fig.suptitle('Experiments 1 and 2: Categorized vs. Uncategorized Lists', fontsize = 42, fontweight = 'bold')
+fig.suptitle('Experiments 1A and 1B: Categorized vs. Uncategorized Lists', fontsize = 42, fontweight = 'bold')
 
 ####Subset by Experiment####
 ex2 = dat[dat['Experiment'] == 1]
@@ -57,7 +57,7 @@ rects3 = ax1.bar(ind + width + .15, r1_average, width, yerr = r1_conf, capsize =
                 label = 'No-JOL', align = "center")
 
 #Make the plot spiffy
-ax1.set_title('Experiment 1: Free-Recall', fontsize = 40, fontweight = 'bold')
+ax1.set_title('Experiment 1A: Free-Recall', fontsize = 40, fontweight = 'bold')
 ax1.set_ylabel('Mean Proportion Recall', fontsize = 36, fontweight = 'bold')
 ax1.set_xlabel('List Type', fontsize = 36, fontweight = 'bold')
 #ax1.xaxis.labelpad = 0
@@ -96,7 +96,7 @@ rects6 = ax2.bar(ind + width + .15, r2_average, width, yerr = r2_conf, capsize =
                 label = 'No-JOL', align = "center")
 
 #Make the plot spiffy
-ax2.set_title('Experiment 2: Recognition Testing', fontsize = 40, fontweight = 'bold')
+ax2.set_title('Experiment 1B: Recognition Testing', fontsize = 40, fontweight = 'bold')
 ax2.set_ylabel('Mean Prop. "old" Responses', fontsize = 36, fontweight = 'bold')
 ax2.set_xlabel('List Type', fontsize = 36, fontweight = 'bold')
 #ax1.xaxis.labelpad = 0

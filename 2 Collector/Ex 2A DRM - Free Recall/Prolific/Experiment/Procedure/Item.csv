@@ -3,184 +3,184 @@ Item,Trial Type,Max Time,Min Time,Text,Procedure Notes,Shuffle
 0,Instruct,-,5,"As you study, you will be asked to rate your ability to remember each item on a later memory test using a 0-100 scale. For example,  if you study the word DOG, a rating of 0 indicates that you would not remember DOG at test, while a rating of 100 indicates full certainty that you would remember the word DOG at test.",,Instruct13
 0,Instruct,-,10,"When making your ratings, it is criticial that you use the full range of the scale. You will be disqualified for only giving ratings of 0 or 100! ",,Instruct15
 0,Instruct,User,-,You will now begin the study. Click next when you are ready to begin.,,Instruct16
-2,JOL,User,-,,Window,Win_1
-3,JOL,User,-,,Window,Win_2
-4,JOL,User,-,,Window,Win_3
-5,JOL,User,-,,Window,Win_4
-6,JOL,User,-,,Window,Win_5
-7,JOL,User,-,,Window,Win_6
-8,JOL,User,-,,Window,Win_7
-9,JOL,User,-,,Window,Win_8
-10,JOL,User,-,,Window,Win_9
-11,JOL,User,-,,Window,Win_10
-12,JOL,User,-,,Window,Win_11
-13,JOL,User,-,,Window,Win_12
+2,JOL,User,1.25,,Window,Win_1
+3,JOL,User,1.25,,Window,Win_2
+4,JOL,User,1.25,,Window,Win_3
+5,JOL,User,1.25,,Window,Win_4
+6,JOL,User,1.25,,Window,Win_5
+7,JOL,User,1.25,,Window,Win_6
+8,JOL,User,1.25,,Window,Win_7
+9,JOL,User,1.25,,Window,Win_8
+10,JOL,User,1.25,,Window,Win_9
+11,JOL,User,1.25,,Window,Win_10
+12,JOL,User,1.25,,Window,Win_11
+13,JOL,User,1.25,,Window,Win_12
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""K"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
-0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
-0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,4,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,4,"You will now complete a memory test for the words you just studied. Please type as many words from the previous list as you can seperated by a comma. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Please separate each word with a comma. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
-14,JOL,User,-,,Rough,R1
-15,JOL,User,-,,Rough,R2
-16,JOL,User,-,,Rough,R3
-17,JOL,User,-,,Rough,R4
-18,JOL,User,-,,Rough,R5
-19,JOL,User,-,,Rough,R6
-20,JOL,User,-,,Rough,R7
-21,JOL,User,-,,Rough,R8
-22,JOL,User,-,,Rough,R9
-23,JOL,User,-,,Rough,R10
-24,JOL,User,-,,Rough,R11
-25,JOL,User,-,,Rough,R12
+14,JOL,User,1.25,,Rough,R1
+15,JOL,User,1.25,,Rough,R2
+16,JOL,User,1.25,,Rough,R3
+17,JOL,User,1.25,,Rough,R4
+18,JOL,User,1.25,,Rough,R5
+19,JOL,User,1.25,,Rough,R6
+20,JOL,User,1.25,,Rough,R7
+21,JOL,User,1.25,,Rough,R8
+22,JOL,User,1.25,,Rough,R9
+23,JOL,User,1.25,,Rough,R10
+24,JOL,User,1.25,,Rough,R11
+25,JOL,User,1.25,,Rough,R12
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""L"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
-0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
-0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,4,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,4,"You will now complete a memory test for the words you just studied. Please type as many words from the previous list as you can seperated by a comma. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Please separate each word with a comma. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
-26,JOL,User,-,,Anger,A1
-27,JOL,User,-,,Anger,A2
-28,JOL,User,-,,Anger,A3
-29,JOL,User,-,,Anger,A4
-30,JOL,User,-,,Anger,A5
-31,JOL,User,-,,Anger,A6
-32,JOL,User,-,,Anger,A7
-33,JOL,User,-,,Anger,A8
-34,JOL,User,-,,Anger,A9
-35,JOL,User,-,,Anger,A10
-36,JOL,User,-,,Anger,A11
-37,JOL,User,-,,Anger,A12
+26,JOL,User,1.25,,Anger,A1
+27,JOL,User,1.25,,Anger,A2
+28,JOL,User,1.25,,Anger,A3
+29,JOL,User,1.25,,Anger,A4
+30,JOL,User,1.25,,Anger,A5
+31,JOL,User,1.25,,Anger,A6
+32,JOL,User,1.25,,Anger,A7
+33,JOL,User,1.25,,Anger,A8
+34,JOL,User,1.25,,Anger,A9
+35,JOL,User,1.25,,Anger,A10
+36,JOL,User,1.25,,Anger,A11
+37,JOL,User,1.25,,Anger,A12
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""M"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
-0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
-0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,4,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,4,"You will now complete a memory test for the words you just studied. Please type as many words from the previous list as you can seperated by a comma. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Please separate each word with a comma. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
-38,JOL,User,-,,Trash,T1
-39,JOL,User,-,,Trash,T2
-40,JOL,User,-,,Trash,T3
-41,JOL,User,-,,Trash,T4
-42,JOL,User,-,,Trash,T5
-43,JOL,User,-,,Trash,T6
-44,JOL,User,-,,Trash,T7
-45,JOL,User,-,,Trash,T8
-46,JOL,User,-,,Trash,T9
-47,JOL,User,-,,Trash,T10
-48,JOL,User,-,,Trash,T11
-49,JOL,User,-,,Trash,T12
+38,JOL,User,1.25,,Trash,T1
+39,JOL,User,1.25,,Trash,T2
+40,JOL,User,1.25,,Trash,T3
+41,JOL,User,1.25,,Trash,T4
+42,JOL,User,1.25,,Trash,T5
+43,JOL,User,1.25,,Trash,T6
+44,JOL,User,1.25,,Trash,T7
+45,JOL,User,1.25,,Trash,T8
+46,JOL,User,1.25,,Trash,T9
+47,JOL,User,1.25,,Trash,T10
+48,JOL,User,1.25,,Trash,T11
+49,JOL,User,1.25,,Trash,T12
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""M"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
-0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
-0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,4,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,4,"You will now complete a memory test for the words you just studied. Please type as many words from the previous list as you can seperated by a comma. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Please separate each word with a comma. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
-50,JOL,User,-,,Doctor,D1
-51,JOL,User,-,,Doctor,D2
-52,JOL,User,-,,Doctor,D3
-53,JOL,User,-,,Doctor,D4
-54,JOL,User,-,,Doctor,D5
-55,JOL,User,-,,Doctor,D6
-56,JOL,User,-,,Doctor,D7
-57,JOL,User,-,,Doctor,D8
-58,JOL,User,-,,Doctor,D9
-59,JOL,User,-,,Doctor,D10
-60,JOL,User,-,,Doctor,D11
-61,JOL,User,-,,Doctor,D12
+50,JOL,User,1.25,,Doctor,D1
+51,JOL,User,1.25,,Doctor,D2
+52,JOL,User,1.25,,Doctor,D3
+53,JOL,User,1.25,,Doctor,D4
+54,JOL,User,1.25,,Doctor,D5
+55,JOL,User,1.25,,Doctor,D6
+56,JOL,User,1.25,,Doctor,D7
+57,JOL,User,1.25,,Doctor,D8
+58,JOL,User,1.25,,Doctor,D9
+59,JOL,User,1.25,,Doctor,D10
+60,JOL,User,1.25,,Doctor,D11
+61,JOL,User,1.25,,Doctor,D12
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""N"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
-0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
-0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,4,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,4,"You will now complete a memory test for the words you just studied. Please type as many words from the previous list as you can seperated by a comma. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Please separate each word with a comma. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
-62,JOL,User,-,,Slow,S1
-63,JOL,User,-,,Slow,S2
-64,JOL,User,-,,Slow,S3
-65,JOL,User,-,,Slow,S4
-66,JOL,User,-,,Slow,S5
-67,JOL,User,-,,Slow,S6
-68,JOL,User,-,,Slow,S7
-69,JOL,User,-,,Slow,S8
-70,JOL,User,-,,Slow,S9
-71,JOL,User,-,,Slow,S10
-72,JOL,User,-,,Slow,S11
-73,JOL,User,-,,Slow,S12
+62,JOL,User,1.25,,Slow,S1
+63,JOL,User,1.25,,Slow,S2
+64,JOL,User,1.25,,Slow,S3
+65,JOL,User,1.25,,Slow,S4
+66,JOL,User,1.25,,Slow,S5
+67,JOL,User,1.25,,Slow,S6
+68,JOL,User,1.25,,Slow,S7
+69,JOL,User,1.25,,Slow,S8
+70,JOL,User,1.25,,Slow,S9
+71,JOL,User,1.25,,Slow,S10
+72,JOL,User,1.25,,Slow,S11
+73,JOL,User,1.25,,Slow,S12
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""R"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
-0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
-0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,4,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,4,"You will now complete a memory test for the words you just studied. Please type as many words from the previous list as you can seperated by a comma. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Please separate each word with a comma. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
-74,JOL,User,-,,River,RR1
-75,JOL,User,-,,River,RR2
-76,JOL,User,-,,River,RR3
-77,JOL,User,-,,River,RR4
-78,JOL,User,-,,River,RR5
-79,JOL,User,-,,River,RR6
-80,JOL,User,-,,River,RR7
-81,JOL,User,-,,River,RR8
-82,JOL,User,-,,River,RR9
-83,JOL,User,-,,River,RR10
-84,JOL,User,-,,River,RR11
-85,JOL,User,-,,River,RR12
+74,JOL,User,1.25,,River,RR1
+75,JOL,User,1.25,,River,RR2
+76,JOL,User,1.25,,River,RR3
+77,JOL,User,1.25,,River,RR4
+78,JOL,User,1.25,,River,RR5
+79,JOL,User,1.25,,River,RR6
+80,JOL,User,1.25,,River,RR7
+81,JOL,User,1.25,,River,RR8
+82,JOL,User,1.25,,River,RR9
+83,JOL,User,1.25,,River,RR10
+84,JOL,User,1.25,,River,RR11
+85,JOL,User,1.25,,River,RR12
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""S"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
-0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
-0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,4,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,4,"You will now complete a memory test for the words you just studied. Please type as many words from the previous list as you can seperated by a comma. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Please separate each word with a comma. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
-86,JOL,User,-,,Bread,B1
-87,JOL,User,-,,Bread,B2
-88,JOL,User,-,,Bread,B3
-89,JOL,User,-,,Bread,B4
-90,JOL,User,-,,Bread,B5
-91,JOL,User,-,,Bread,B6
-92,JOL,User,-,,Bread,B7
-93,JOL,User,-,,Bread,B8
-94,JOL,User,-,,Bread,B9
-95,JOL,User,-,,Bread,B10
-96,JOL,User,-,,Bread,B11
-97,JOL,User,-,,Bread,B12
+86,JOL,User,1.25,,Bread,B1
+87,JOL,User,1.25,,Bread,B2
+88,JOL,User,1.25,,Bread,B3
+89,JOL,User,1.25,,Bread,B4
+90,JOL,User,1.25,,Bread,B5
+91,JOL,User,1.25,,Bread,B6
+92,JOL,User,1.25,,Bread,B7
+93,JOL,User,1.25,,Bread,B8
+94,JOL,User,1.25,,Bread,B9
+95,JOL,User,1.25,,Bread,B10
+96,JOL,User,1.25,,Bread,B11
+97,JOL,User,1.25,,Bread,B12
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""T"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
-0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
-0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,4,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,4,"You will now complete a memory test for the words you just studied. Please type as many words from the previous list as you can seperated by a comma. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Please separate each word with a comma. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
-98,JOL,User,-,,Flag,F1
-99,JOL,User,-,,Flag,F2
-100,JOL,User,-,,Flag,F3
-101,JOL,User,-,,Flag,F4
-102,JOL,User,-,,Flag,F5
-103,JOL,User,-,,Flag,F6
-104,JOL,User,-,,Flag,F7
-105,JOL,User,-,,Flag,F8
-106,JOL,User,-,,Flag,F9
-107,JOL,User,-,,Flag,F10
-108,JOL,User,-,,Flag,F11
-109,JOL,User,-,,Flag,F12
+98,JOL,User,1.25,,Flag,F1
+99,JOL,User,1.25,,Flag,F2
+100,JOL,User,1.25,,Flag,F3
+101,JOL,User,1.25,,Flag,F4
+102,JOL,User,1.25,,Flag,F5
+103,JOL,User,1.25,,Flag,F6
+104,JOL,User,1.25,,Flag,F7
+105,JOL,User,1.25,,Flag,F8
+106,JOL,User,1.25,,Flag,F9
+107,JOL,User,1.25,,Flag,F10
+108,JOL,User,1.25,,Flag,F11
+109,JOL,User,1.25,,Flag,F12
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""W"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
-0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
-0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,4,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,4,"You will now complete a memory test for the words you just studied. Please type as many words from the previous list as you can seperated by a comma. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Please separate each word with a comma. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,3,You will now be presented with a new study list. Click next when you are ready to begin.,,NEXT_LIST
-110,JOL,User,-,,Shirt,SS1
-111,JOL,User,-,,Shirt,SS2
-112,JOL,User,-,,Shirt,SS3
-113,JOL,User,-,,Shirt,SS4
-114,JOL,User,-,,Shirt,SS5
-115,JOL,User,-,,Shirt,SS6
-116,JOL,User,-,,Shirt,SS7
-117,JOL,User,-,,Shirt,SS8
-118,JOL,User,-,,Shirt,SS9
-119,JOL,User,-,,Shirt,SS10
-120,JOL,User,-,,Shirt,SS11
-121,JOL,User,-,,Shirt,SS12
+110,JOL,User,1.25,,Shirt,SS1
+111,JOL,User,1.25,,Shirt,SS2
+112,JOL,User,1.25,,Shirt,SS3
+113,JOL,User,1.25,,Shirt,SS4
+114,JOL,User,1.25,,Shirt,SS5
+115,JOL,User,1.25,,Shirt,SS6
+116,JOL,User,1.25,,Shirt,SS7
+117,JOL,User,1.25,,Shirt,SS8
+118,JOL,User,1.25,,Shirt,SS9
+119,JOL,User,1.25,,Shirt,SS10
+120,JOL,User,1.25,,Shirt,SS11
+121,JOL,User,1.25,,Shirt,SS12
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
 0,FreeRecall,30,30,"Please type as many words as you can that begin with the letter ""C"". The computer will automatically advance to the next screen in 30 seconds.",,FILLER
-0,Instruct,User,-,You have completed this section. Please click next.,,Instruct166
-0,Instruct,User,-,"You will now complete a memory test for the words you just studied. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
-0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
+0,Instruct,User,4,You have completed this section. Please click next.,,Instruct166
+0,Instruct,User,4,"You will now complete a memory test for the words you just studied. Please type as many words from the previous list as you can seperated by a comma. Spelling will not count against you and you can recall the words in any order.  This test will be timed for one minute, and the computer will automatically advance once time is up. Click next when you are ready to begin.",,Instruct1666
+0,FreeRecall,60,60,Please type as many words as you can from the previous study list in any order. Please separate each word with a comma. Spelling will not count against you. This screen will automatically advance in one minute.,,RECALL_Test
 0,Instruct,User,-,You have completed this section. Please click next.,,Instruct7
 0,Instruct,User,-,The following screen will ask you a few questions abour your experience today. You must complete these questions to receive credit.,,Instruct8
