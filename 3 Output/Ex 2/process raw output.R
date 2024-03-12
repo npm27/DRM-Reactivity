@@ -1,7 +1,7 @@
 ####This script will be used to read in everything and set EX 2data up for processing####
 ##Start by gathering all of the data
 #Item
-setwd("C:/Users/nickm/OneDrive/Documents/GitHub/DRM-Reactivity/3 Output/Ex 2B/Item")
+setwd("C:/Users/nickm/OneDrive/Documents/GitHub/DRM-Reactivity/3 Output/Ex 2/Item")
 
 files = list.files(pattern = "*.csv")
 
@@ -12,7 +12,7 @@ dat = do.call(rbind, lapply(files, function(x) read.csv(x, stringsAsFactors = FA
 length(unique(dat$Username))
 
 #List
-setwd("C:/Users/nickm/OneDrive/Documents/GitHub/DRM-Reactivity/3 Output/Ex 2B/List")
+setwd("C:/Users/nickm/OneDrive/Documents/GitHub/DRM-Reactivity/3 Output/Ex 2/List")
 
 files2 = list.files(pattern = "*.csv")
 
@@ -23,7 +23,7 @@ dat2 = do.call(rbind, lapply(files2, function(x) read.csv(x, stringsAsFactors = 
 length(unique(dat2$Username))
 
 #Read
-setwd("C:/Users/nickm/OneDrive/Documents/GitHub/DRM-Reactivity/3 Output/Ex 2B/Read")
+setwd("C:/Users/nickm/OneDrive/Documents/GitHub/DRM-Reactivity/3 Output/Ex 2/Read")
 
 files3 = list.files(pattern = "*.csv")
 
