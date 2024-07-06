@@ -47,7 +47,7 @@ length(unique(read$ID)) #39
 ##any more cheaters/slackers?
 global.wide = cast(global, ID ~ List_Type, mean)
 item.wide = cast(item, ID ~ List_Type, mean)
-read.wide = cast(read, ID ~ List_Type, mean) #Nope, finally looks good!
+read.wide = cast(read, ID ~ List_Type, mean) #Nope, looks good!
 
 ####Descriptives####
 tapply(dat$scored, dat$encoding, mean) 
@@ -76,6 +76,23 @@ aovEffectSize(model1, effectSize = "pes")
 tapply(dat$scored, dat$encoding, mean) #encoding
 tapply(dat$scored, dat$List_Type, mean) #list type
 tapply(dat$scored, list(dat$encoding, dat$List_Type), mean) #interaction
+
+####Any interactions w/ version?####
+vs = read.csv("1a versions.csv")
+
+dat.vs = merge(dat, vs, by.x = "ID", by.y = "Username")
+
+colnames(dat.vs)[5] = "version"
+
+model.v = ezANOVA(dat.vs,
+                 wid = ID,
+                 within = List_Type,
+                 between = .(encoding, version),
+                 dv = scored,
+                 type = 3,
+                 detailed = T)
+
+model.v #no interactions or main effects of sequence
 
 ####Post-hocs####
 dat.ph = cast(dat, ID ~ encoding, mean)
@@ -127,11 +144,14 @@ temp$statistic
 
 ####Interaction####
 ##related lists
+#global vs read
 temp = t.test(global.wide$Related, item.wide$Related, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #non-sig
+
+sd(global.wide$Related); sd(item.wide$Related)
 
 ##get pbics
 pbic1 = global.wide[ , c(1:2)]
@@ -206,6 +226,8 @@ temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #non-sig
+
+sd(item.wide$Unrelated); sd(read.wide$Unrelated)
 
 ##get 95% CI values for Table A1
 (apply(item.wide, 2, sd) / sqrt(nrow(item.wide))) * 1.96

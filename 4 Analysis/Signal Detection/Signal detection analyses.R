@@ -26,8 +26,19 @@ mean(iJOL$c.1); mean(gJOL$c.1); mean(Read$c.1) #.03 vs. .22 vs. .16
 sd(iJOL$dprime); sd(gJOL$dprime); sd(Read$dprime) 
 sd(iJOL$c.1); sd(gJOL$c.1); sd(Read$c.1) 
 
+##and get CIs
+((sd(iJOL$dprime) / sqrt(nrow(iJOL)))) * 1.96
+((sd(gJOL$dprime) / sqrt(nrow(gJOL)))) * 1.96
+((sd(Read$dprime) / sqrt(nrow(Read)))) * 1.96
+
+((sd(iJOL$c.1) / sqrt(nrow(iJOL)))) * 1.96
+((sd(gJOL$c.1) / sqrt(nrow(gJOL)))) * 1.96
+((sd(Read$c.1) / sqrt(nrow(Read)))) * 1.96
+
 ##d'
 #ANOVA
+
+
 model1 = ezANOVA(ex1,
         wid = i,
         between = e,
@@ -131,6 +142,15 @@ mean(iJOL2$c.1); mean(gJOL2$c.1); mean(Read2$c.1) #-0.10 vs 0.11 vs .23
 sd(iJOL2$dprime); sd(gJOL2$dprime); sd(Read2$dprime) 
 sd(iJOL2$c.1); sd(gJOL2$c.1); sd(Read2$c.1) 
 
+#get CIs
+((sd(iJOL2$dprime) / sqrt(nrow(iJOL2)))) * 1.96
+((sd(gJOL2$dprime) / sqrt(nrow(gJOL2)))) * 1.96
+((sd(Read2$dprime) / sqrt(nrow(Read2)))) * 1.96
+
+((sd(iJOL2$c.1) / sqrt(nrow(iJOL2)))) * 1.96
+((sd(gJOL2$c.1) / sqrt(nrow(gJOL2)))) * 1.96
+((sd(Read2$c.1) / sqrt(nrow(Read2)))) * 1.96
+
 ###d'
 ##ANOVA
 model3 = ezANOVA(ex2_p,
@@ -152,6 +172,8 @@ temp
 round(temp$p.value, 3)
 temp$statistic #marginal
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+
+sd(iJOL2$dprime); sd(gJOL2$dprime)
 
 ##get pbic
 pbic1 = gJOL2[ , c(1, 7)]
@@ -233,11 +255,14 @@ round(temp$p.value, 3)
 temp$statistic #sig!
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 
+
 temp = t.test(gJOL2$c.1, Read2$c.1, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic #non-sig
-(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #No difference in C
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #No difference in C'
+
+sd(gJOL2$c.1); sd(Read2$c.1)
 
 #get pbic
 pbic1 = gJOL2[ , c(1, 11)]

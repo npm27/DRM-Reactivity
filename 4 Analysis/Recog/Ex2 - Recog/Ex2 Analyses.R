@@ -79,7 +79,20 @@ model1$ANOVA$MSE
 
 aovEffectSize(model1, effectSize = "pes")
 
-##post-hocs
+####Differences between versions?####
+vs = read.csv("ex2 versions.csv")
+dat.vs = merge(presented, vs, by.x = "Username", by.y = "Username")
+colnames(dat.vs)[5] = 'version'
+
+model.v = ezANOVA(dat.vs,
+                 dv = scored,
+                 between = .(encoding, version),
+                 wid = Username,
+                 type = 3,
+                 detailed = T)
+model.v
+
+####post-hocs####
 #set up the data
 presented.ph = cast(presented, Username ~ encoding, mean)
 
@@ -107,6 +120,8 @@ temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #NON SIG
+
+sd(presented.ph$read, na.rm = T); sd(presented.ph$global, na.rm = T)
 
 #get pbic
 pbic1 = presented.ph[ , c(1, 2)]
@@ -161,6 +176,8 @@ temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Non-SIG
+
+sd(cl.ph$read, na.rm = T); sd(cl.ph$item, na.rm = T)
 
 #get pbic
 pbic1 = cl.ph[ , c(1, 3)]

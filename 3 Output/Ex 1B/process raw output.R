@@ -37,6 +37,19 @@ length(unique(dat3$Username))
 #This is where I'll store the combined final output for scoring
 setwd('..')
 
+##get versions and usernames
+v1 = dat[ , c(1, 9)]
+v2 = dat2[ , c(1, 9)]
+v3 = dat3[ , c(1, 9)]
+
+vs = rbind(v1, v2, v3)
+
+vs$dupe = duplicated(vs$Username)
+vs2 = subset(vs,
+             vs$dupe == FALSE)
+
+#write.csv(vs2[ , -3], file = "ex1b version.csv", row.names = F)
+
 ####Clean up the data files####
 ##Drop unused columns
 dat = dat[ , -c(2:7, 9:10, 12, 20:23, 28:33, 35)]

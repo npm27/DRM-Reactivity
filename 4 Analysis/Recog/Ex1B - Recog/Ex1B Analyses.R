@@ -92,6 +92,28 @@ model1$ANOVA$MSE
 
 aovEffectSize(model1, effectSize = "pes")
 
+####okay, add in version####
+vs = read.csv("ex1b version.csv")
+
+dat.v = merge(presented, vs, by.x = "Username", by.y = "Username")
+
+colnames(dat.v)[6] = "version"
+
+model.v = ezANOVA(dat.v,
+                 dv = scored,
+                 within = Direction,
+                 between = .(Encoding, version),
+                 wid = Username,
+                 type = 3,
+                 detailed = T)
+
+model.v
+
+model.v$ANOVA$MSE = model.v$ANOVA$SSd/model.v$ANOVA$DFd
+model.v$ANOVA$MSE
+
+aovEffectSize(model.v, effectSize = "pes")
+
 #control items
 model2 = ezANOVA(control,
         dv = scored,
@@ -146,6 +168,8 @@ round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Non-SIG
 
+sd(encoding.ph$Read, na.rm = T); sd(encoding.ph$Global_JOL, na.rm = T)
+
 ##get pbic
 pbic1 = encoding.ph[ , c(1, 2)]
 pbic2 = encoding.ph[ , c(1, 4)]
@@ -168,6 +192,7 @@ ezANOVA(pbic3,
         type = 3,
         detailed = T)
 
+####Interaction####
 ##break down the interaction
 gjol = subset(presented, presented$Encoding == "Global_JOL")
 ijol = subset(presented, presented$Encoding == "Item_JOL")
@@ -227,6 +252,8 @@ round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Non-Sig
 
+sd(gjol2$Unrelated); sd(read2$Unrelated)
+
 ##pbic
 pbic1 = gjol2[ , c(1, 3)]
 pbic2 = read2[ , c(1, 3)]
@@ -243,7 +270,7 @@ ezANOVA(pbic3,
         type = 3,
         detailed = T)
 
-###control pairs
+####control items####
 gjol3 = subset(control, control$Encoding == "Global_JOL")
 ijol3 = subset(control, control$Encoding == "Item_JOL")
 read3 = subset(control, control$Encoding == "Read")
@@ -259,6 +286,8 @@ temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #NON-SIG
+
+sd(gjol4$Control); sd(ijol4$Control)
 
 #item vs. read
 temp = t.test(ijol4$Control, read4$Control, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
@@ -276,6 +305,8 @@ temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #marginal
+
+sd(gjol4$Control); sd(read4$Control)
 
 ##get pbics
 gjol4$encoding = rep("global")
@@ -305,7 +336,7 @@ ezANOVA(pbic2,
 ##global JOLs are not reactive
 ##but both types of JOLs make participants less susceptible to false recognition of control items (bigger effect w/ item based JOLs)
 
-##get values for Table A1
+##get values for Table A3
 (apply(ijol2, 2, sd) / sqrt(nrow(ijol2))) * 1.96
 (apply(gjol2, 2, sd) / sqrt(nrow(gjol2))) * 1.96
 (apply(read2, 2, sd) / sqrt(nrow(read2))) * 1.96
