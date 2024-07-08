@@ -75,6 +75,8 @@ round(temp$p.value, 3)
 temp$statistic #non-sig
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 
+sd(gJOL$dprime); sd(Read$dprime)
+
 #get pbic
 pbic1 = gJOL[ , c(1, 7)]
 pbic2 = Read[ , c(1, 7)]

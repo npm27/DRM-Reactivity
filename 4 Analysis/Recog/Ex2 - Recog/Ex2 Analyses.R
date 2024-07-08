@@ -227,5 +227,29 @@ ezANOVA(control,
 cl2.ph = cast(cl_control, Username ~ encoding, mean)
 control.ph = cast(control, Username ~ encoding, mean)
 
+control.combined = rbind(cl_control, control)
+control.combined.ph = cast(control.combined, Username ~ encoding, mean)
+
 (apply(cl2.ph, 2, sd, na.rm = T) / sqrt(length(unique(cl2.ph$Username)))) * 1.96
 (apply(control.ph, 2, sd, na.rm = T) / sqrt(length(unique(control.ph$Username)))) * 1.96
+
+apply(control.combined.ph, 2, mean, na.rm = T)
+(apply(control.combined.ph, 2, sd, na.rm = T) / sqrt(length(unique(control.ph$Username)))) * 1.96
+
+####JOLs####
+JOLs = read.csv("ex2 JOLs.csv")
+
+JOLs = subset(JOLs,
+              JOLs$Username != "ValeriaMunoz")
+JOLs = subset(JOLs,
+              JOLs$Username != "HayleyGardner")
+JOLs = subset(JOLs,
+              JOLs$Username != "KezaUwamahoro")
+
+tapply(JOLs$V1, JOLs$encoding, mean)
+
+JOLs.I = subset(JOLs, JOLs$encoding == "item")
+JOLs.G = subset(JOLs, JOLs$encoding == "global")
+
+(sd(JOLs.I$V1) / sqrt(nrow(JOLs.I))) * 1.96
+(sd(JOLs.G$V1) / sqrt(nrow(JOLs.G))) * 1.96

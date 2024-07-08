@@ -1,7 +1,6 @@
 ####Set up####
 ##read in data
 dat = read.csv("Data/ex1a.csv")
-dat2 = read.csv("Data/ex1a_fixed.csv")
 
 ##load libraries
 library(reshape)
@@ -14,11 +13,6 @@ options(scipen = 999)
 ##fix column names
 colnames(dat)[1:2] = c("ID", "List_Type")
 colnames(dat)[4] = "scored"
-
-dat2 = dat2[ , c(1, 4:5, 2)]
-
-colnames(dat2)[1:2] = c("ID", "List_Type")
-colnames(dat2)[4] = "scored"
 
 #get ns
 global = subset(dat,
@@ -34,8 +28,6 @@ table(item$ID)
 #remove participant who didn't complete experiment
 dat = subset(dat,
              dat$ID != "653b9ed2c4b3466a16bc6e05")
-dat2 = subset(dat2,
-             dat2 != "653b9ed2c4b3466a16bc6e05")
 
 length(unique(item$ID)) #37 - 1
 
@@ -53,7 +45,6 @@ read.wide = cast(read, ID ~ List_Type, mean) #Nope, looks good!
 tapply(dat$scored, dat$encoding, mean) 
 
 tapply(dat$scored, list(dat$encoding, dat$List_Type), mean)
-#tapply(dat2$scored, list(dat2$encoding, dat2$List_Type), mean) #okay, either scoring method works!
 
 model1 = ezANOVA(dat,
         wid = ID,
@@ -229,8 +220,41 @@ temp$statistic
 
 sd(item.wide$Unrelated); sd(read.wide$Unrelated)
 
-##get 95% CI values for Table A1
+##get 95% CI values for Table A2
 (apply(item.wide, 2, sd) / sqrt(nrow(item.wide))) * 1.96
 (apply(global.wide, 2, sd) / sqrt(nrow(global.wide))) * 1.96
 (apply(read.wide, 2, sd) / sqrt(nrow(read.wide))) * 1.96
 
+####Get JOLs for Table A4
+JOLs = read.csv("ex1a JOLs.csv")
+
+##drop JOL outliers
+JOLs = subset(JOLs,
+              JOLs$Username != "653b9ed2c4b3466a16bc6e05")
+
+#these were dropped from the recall data during the scoring phase
+JOLs = subset(JOLs,
+                  JOLs$Username != "5c4e5f2ae5f00f0001542748")
+JOLs = subset(JOLs,
+                  JOLs$Username != "63fbd3e8b4865c6e1fb04614")
+JOLs = subset(JOLs,
+                  JOLs$Username != "62fbe4c86d484357b6adbc36")
+JOLs = subset(JOLs,
+                  JOLs$Username != "652d5dcfbf51f8f449531f8d")
+JOLs = subset(JOLs,
+                  JOLs$Username != "63f7dc10de20707c3dff50b4")
+JOLs = subset(JOLs,
+                  JOLs$Username != "5d8a29c082fec30001d9c24a")
+
+##Now get means and CIs s for table A4
+tapply(JOLs$Related, JOLs$encoding, mean, na.rm = T)
+tapply(JOLs$Unrelated, JOLs$encoding, mean, na.rm = T)
+
+JOLs.I = subset(JOLs, JOLs$encoding == "item")
+JOLs.G = subset(JOLs, JOLs$encoding == "global")
+
+(apply(JOLs.I[ , c(2:3)], 2, sd, na.rm = T) / sqrt(nrow(JOLs.I))) * 1.96
+(apply(JOLs.G[ , c(2:3)], 2, sd, na.rm = T) / sqrt(nrow(JOLs.G))) * 1.96
+
+t.test(JOLs.I$Related, JOLs.I$Unrelated, paired = T, var.equal = T)
+t.test(JOLs.G$Related, JOLs.G$Unrelated, paired = T, var.equal = T)

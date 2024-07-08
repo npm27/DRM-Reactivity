@@ -352,3 +352,25 @@ temp$statistic
 (sd(ijol4$Control) / sqrt(nrow(ijol4))) * 1.96
 (sd(gjol4$Control) / sqrt(nrow(gjol4))) * 1.96
 (sd(read4$Control) / sqrt(nrow(read4))) * 1.96
+
+####JOLs####
+JOLs = read.csv("ex1b JOLs.csv")
+
+##remove outliers
+#item
+JOLs = subset(JOLs,
+              JOLs$Username != "M20265302_MJL")
+JOLs = subset(JOLs,
+              JOLs$Username != "M20331476")
+
+tapply(JOLs$Related, JOLs$encoding, mean)
+tapply(JOLs$Unrelated, JOLs$encoding, mean)
+
+JOL.I = subset(JOLs, JOLs$encoding == "item")
+JOL.G = subset(JOLs, JOLs$encoding == "global")
+
+(apply(JOL.I[ , c(2:3)], 2, sd) / sqrt(nrow(JOL.I))) * 1.96
+(apply(JOL.G[ , c(2:3)], 2, sd) / sqrt(nrow(JOL.G))) * 1.96
+
+t.test(JOL.I$Related, JOL.I$Unrelated, paired = T, var.equal = T)
+t.test(JOL.G$Related, JOL.G$Unrelated, paired = T, var.equal = T)

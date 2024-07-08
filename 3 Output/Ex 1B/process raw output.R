@@ -38,17 +38,39 @@ length(unique(dat3$Username))
 setwd('..')
 
 ##get versions and usernames
-v1 = dat[ , c(1, 9)]
-v2 = dat2[ , c(1, 9)]
-v3 = dat3[ , c(1, 9)]
+#v1 = dat[ , c(1, 9)]
+#v2 = dat2[ , c(1, 9)]
+#v3 = dat3[ , c(1, 9)]
 
-vs = rbind(v1, v2, v3)
+#vs = rbind(v1, v2, v3)
 
-vs$dupe = duplicated(vs$Username)
-vs2 = subset(vs,
-             vs$dupe == FALSE)
+#vs$dupe = duplicated(vs$Username)
+#vs2 = subset(vs,
+             #vs$dupe == FALSE)
 
 #write.csv(vs2[ , -3], file = "ex1b version.csv", row.names = F)
+
+#get mean JOLs
+library(reshape)
+
+dat$Response.JOL = as.numeric(dat$Response.JOL)
+dat2$Response.JOL = as.numeric(dat2$Response.JOL)
+
+dat$Response.JOL[dat$Response.JOL > 100] = NA
+dat2$Response.JOL[dat2$Response.JOL > 100] = NA
+
+dat1.JOL = cast(dat, Username ~ Stimuli.Stimuli.Notes, value = "Response.JOL", mean, na.rm = T)
+dat2.JOL = cast(dat2, Username ~ Procedure.Procedure.Notes, value = "Response.JOL", mean, na.rm = T)
+
+dat1.JOL = dat1.JOL[ , -c(2:4)]
+dat2.JOL = dat2.JOL[ , -c(2:9)]
+
+dat1.JOL$encoding = rep("item")
+dat2.JOL$encoding = rep("global")
+
+JOLs = rbind(dat1.JOL, dat2.JOL)
+
+#write.csv(JOLs, file = "ex1b JOLs.csv", row.names = F)
 
 ####Clean up the data files####
 ##Drop unused columns

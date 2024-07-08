@@ -48,7 +48,7 @@ ax1.set_ylabel('Mean Prop. "old" Responses', fontsize = 36, fontweight = 'bold')
 ax1.set_xlabel('List Type', fontsize = 36, fontweight = 'bold')
 #ax1.xaxis.labelpad = 0
 ax1.set_xticks(ind + .15)
-ax1.set_xticklabels(('Categorized', 'Uncategorized', 'New'), fontsize = 32)
+ax1.set_xticklabels(('Categorized', 'Uncategorized', 'Control'), fontsize = 32)
 ax1.tick_params(axis="y", labelsize=32)
 ax1.legend(fontsize = 32)
 ax1.set_ylim([0,1])
