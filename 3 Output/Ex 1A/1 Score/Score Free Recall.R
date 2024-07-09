@@ -431,8 +431,6 @@ Ex1A_scored = subset(Ex1A_scored,
 #read
 Ex1A_scored = subset(Ex1A_scored,
                      Ex1A_scored$Sub.ID != "650215217993641ac7ab92a8")
-###Remove cheaters
-#read
 Ex1A_scored = subset(Ex1A_scored,
                      Ex1A_scored$Sub.ID != "599a9252bbe848000179676e")
 Ex1A_scored = subset(Ex1A_scored,

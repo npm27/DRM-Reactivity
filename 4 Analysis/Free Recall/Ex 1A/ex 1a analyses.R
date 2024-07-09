@@ -245,6 +245,19 @@ JOLs = subset(JOLs,
                   JOLs$Username != "63f7dc10de20707c3dff50b4")
 JOLs = subset(JOLs,
                   JOLs$Username != "5d8a29c082fec30001d9c24a")
+JOLs = subset(JOLs,
+           JOLs$Username != "650215217993641ac7ab92a8")
+JOLs = subset(JOLs,
+           JOLs$Username != "599a9252bbe848000179676e")
+JOLs = subset(JOLs,
+           JOLs$Username != "5788c16f275be600013590a8")
+JOLs = subset(JOLs,
+           JOLs$Username != "561487ad7ffc8a0012812266" & JOLs$Username != "5fc653586deb34268015308a")
+JOLs = subset(JOLs,
+           JOLs$Username != "65730b470b3ff6af4dfe899d" & JOLs$Username != "650f1cffdfb4dd61f51abefd" &
+             JOLs$Username != "6563003ce4f5a268a959df06")
+JOLs = subset(JOLs,
+           JOLs$Username != "5bde0463520c030001f4959f" & JOLs$Username != "657c791622f9617fcc0de8fa")
 
 ##Now get means and CIs s for table A4
 tapply(JOLs$Related, JOLs$encoding, mean, na.rm = T)
@@ -258,3 +271,58 @@ JOLs.G = subset(JOLs, JOLs$encoding == "global")
 
 t.test(JOLs.I$Related, JOLs.I$Unrelated, paired = T, var.equal = T)
 t.test(JOLs.G$Related, JOLs.G$Unrelated, paired = T, var.equal = T)
+
+####Encoding latencies####
+e = read.csv("Ex1a Encoding.csv")
+
+##drop outliers
+e = subset(e,
+              e$Username != "653b9ed2c4b3466a16bc6e05")
+
+#these were dropped from the recall data during the scoring phase
+e = subset(e,
+              e$Username != "5c4e5f2ae5f00f0001542748")
+e = subset(e,
+              e$Username != "63fbd3e8b4865c6e1fb04614")
+e = subset(e,
+              e$Username != "62fbe4c86d484357b6adbc36")
+e = subset(e,
+              e$Username != "652d5dcfbf51f8f449531f8d")
+e = subset(e,
+              e$Username != "63f7dc10de20707c3dff50b4")
+e = subset(e,
+              e$Username != "5d8a29c082fec30001d9c24a")
+e = subset(e,
+           e$Username != "650215217993641ac7ab92a8")
+e = subset(e,
+           e$Username != "599a9252bbe848000179676e")
+e = subset(e,
+           e$Username != "5788c16f275be600013590a8")
+e = subset(e,
+           e$Username != "561487ad7ffc8a0012812266" & e$Username != "5fc653586deb34268015308a")
+e = subset(e,
+           e$Username != "65730b470b3ff6af4dfe899d" & e$Username != "650f1cffdfb4dd61f51abefd" &
+           e$Username != "6563003ce4f5a268a959df06")
+e = subset(e,
+           e$Username != "5bde0463520c030001f4959f" & e$Username != "657c791622f9617fcc0de8fa")
+
+####Run the Anova####
+library(ez)
+library(reshape)
+options(scipen = 999)
+
+e.long = melt(e,
+              measure.vars = c("Related", "Unrelated"))
+colnames(e.long)[3:4] = c("List_Type", "Score")
+
+e.long = na.omit(e.long)
+
+ezANOVA(e.long,
+        wid = Username,
+        dv = Score,
+        between = Encoding,
+        within = List_Type,
+        type = 3,
+        detailed = T)
+
+tapply(e.long$Score, list(e.long$Encoding, e.long$List_Type), mean)

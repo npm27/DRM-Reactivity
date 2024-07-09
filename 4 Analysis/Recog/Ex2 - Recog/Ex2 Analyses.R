@@ -253,3 +253,37 @@ JOLs.G = subset(JOLs, JOLs$encoding == "global")
 
 (sd(JOLs.I$V1) / sqrt(nrow(JOLs.I))) * 1.96
 (sd(JOLs.G$V1) / sqrt(nrow(JOLs.G))) * 1.96
+
+####Encoding Latencies####
+e = read.csv("Ex2 Encoding.csv")
+
+e = subset(e,
+           e$Username != "ValeriaMunoz")
+e = subset(e,
+           e$Username != "HayleyGardner")
+e = subset(e,
+           e$Username != "KezaUwamahoro")
+e = subset(e,
+           e$Username != "KamiyaSlaughter") #super high on non-presented items
+
+####Run the Anova####
+library(ez)
+library(reshape)
+options(scipen = 999)
+
+e.long = e
+colnames(e.long)[2] = "Score"
+
+e.long$Score[e.long$Score > 10000] = NA
+e.long$Score[e.long$Score < 1000] = NA
+
+e.long = na.omit(e.long)
+
+ezANOVA(e.long,
+        wid = Username,
+        dv = Score,
+        between = Encoding,
+        type = 3,
+        detailed = T)
+
+tapply(e.long$Score, e.long$Encoding, mean)

@@ -374,3 +374,40 @@ JOL.G = subset(JOLs, JOLs$encoding == "global")
 
 t.test(JOL.I$Related, JOL.I$Unrelated, paired = T, var.equal = T)
 t.test(JOL.G$Related, JOL.G$Unrelated, paired = T, var.equal = T)
+
+####Encoding Latencies####
+e = read.csv("Ex1B Encoding.csv")
+
+##remove outliers
+#read
+e = subset(e,
+           e$Username != "20291142" & e$Username != "M20303251_AAR" & e$Username != "M20304460_DNI" &
+           e$Username != "M20322322")
+e = subset(e,
+           e$Username != "M20265302_MJL")
+e = subset(e,
+           e$Username != "M20331476")
+
+####Run the Anova####
+library(ez)
+library(reshape)
+options(scipen = 999)
+
+e.long = melt(e,
+              measure.vars = c("Related", "Unrelated"))
+colnames(e.long)[3:4] = c("List_Type", "Score")
+
+e.long$Score[e.long$Score > 10000] = NA
+e.long$Score[e.long$Score < 1000] = NA
+
+e.long = na.omit(e.long)
+
+ezANOVA(e.long,
+        wid = Username,
+        dv = Score,
+        between = .(List_Type, Encoding),
+        type = 3,
+        detailed = T)
+
+tapply(e.long$Score, list(e.long$Encoding, e.long$List_Type), mean)
+

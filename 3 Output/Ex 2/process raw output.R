@@ -51,26 +51,56 @@ setwd('..')
 #write.csv(vs2[ , -3], file = "ex2 versions.csv", row.names = F)
 
 #get mean JOLs
-library(reshape)
+#library(reshape)
 
-dat$Response.JOL = as.numeric(dat$Response.JOL)
-dat2$Response.JOL = as.numeric(dat2$Response.JOL)
+#dat$Response.JOL = as.numeric(dat$Response.JOL)
+#dat2$Response.JOL = as.numeric(dat2$Response.JOL)
 
-dat$Response.JOL[dat$Response.JOL > 100] = NA
-dat2$Response.JOL[dat2$Response.JOL > 100] = NA
+#dat$Response.JOL[dat$Response.JOL > 100] = NA
+#dat2$Response.JOL[dat2$Response.JOL > 100] = NA
 
-dat1.JOL = cast(dat, Username ~ Stimuli.Stimuli.Notes, value = "Response.JOL", mean, na.rm = T)
-dat2.JOL = cast(dat2, Username ~ Stimuli.Stimuli.Notes, value = "Response.JOL", mean, na.rm = T)
+#dat1.JOL = cast(dat, Username ~ Stimuli.Stimuli.Notes, value = "Response.JOL", mean, na.rm = T)
+#dat2.JOL = cast(dat2, Username ~ Stimuli.Stimuli.Notes, value = "Response.JOL", mean, na.rm = T)
 
-dat1.JOL = dat1.JOL[ , -c(3:6)]
-dat2.JOL = dat2.JOL[ , -c(3:6)]
+#dat1.JOL = dat1.JOL[ , -c(3:6)]
+#dat2.JOL = dat2.JOL[ , -c(3:6)]
 
-dat1.JOL$encoding = rep("item")
-dat2.JOL$encoding = rep("global")
+#dat1.JOL$encoding = rep("item")
+#dat2.JOL$encoding = rep("global")
 
-JOLs = rbind(dat1.JOL, dat2.JOL)
+#JOLs = rbind(dat1.JOL, dat2.JOL)
 
 #write.csv(JOLs, file = "ex2 JOLs.csv", row.names = F)
+
+####Encoding Latencies####
+dat.E = subset(dat,
+               dat$Procedure.Trial.Type == "JOL")
+dat2.E = subset(dat2,
+                dat2$Procedure.Trial.Type == "Study")
+dat3.E = subset(dat3,
+                dat3$Procedure.Trial.Type == "Study")
+
+##omit extreme scores
+dat.E$Response.RT[dat.E$Response.RT > 9999] = NA
+dat.E$Response.RT[dat.E$Response.RT < 1000] = NA
+
+dat2.E$Response.RT[dat2.E$Response.RT > 9999] = NA
+dat2.E$Response.RT[dat2.E$Response.RT < 1000] = NA
+
+dat3.E$Response.RT[dat3.E$Response.RT > 9999] = NA
+dat3.E$Response.RT[dat3.E$Response.RT < 1000] = NA
+
+library(reshape)
+
+dat1.Encoding = cast(dat.E, Username ~ Stimuli.Stimuli.Notes, value = "Response.RT", mean, na.rm = T)
+dat2.Encoding = cast(dat2.E, Username ~ Stimuli.Stimuli.Notes, value = "Response.RT", mean, na.rm = T)
+dat3.Encoding = cast(dat3.E, Username ~ Stimuli.Stimuli.Notes, value = "Response.RT", mean, na.rm = T)
+
+dat1.Encoding$Encoding = rep("item")
+dat2.Encoding$Encoding = rep("global")
+dat3.Encoding$Encoding = rep("read")
+
+#write.csv(rbind(dat1.Encoding, dat2.Encoding, dat3.Encoding), file = "Ex2 Encoding.csv", row.names = F)
 
 ####Clean up the data files####
 ##Drop unused columns
