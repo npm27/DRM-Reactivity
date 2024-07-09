@@ -109,3 +109,18 @@ ezANOVA(dat2,
         detailed = T) #ns (1, 77) = 1.70, p = .20
 
 ####Ex 2####
+dat = read.csv("Ex 2 Stim.csv")
+
+dat$Con = as.numeric(dat$Con)
+
+tapply(dat$BAS, dat$Counterbalance, mean)
+tapply(dat$BAS, dat$Counterbalance, sd)
+
+tapply(dat$Length, dat$Counterbalance, mean)
+tapply(dat$Length, dat$Counterbalance, sd)
+
+tapply(dat$Con, dat$Counterbalance, mean, na.rm = T)
+tapply(dat$Con, dat$Counterbalance, sd, na.rm = T)
+
+tapply(dat$Freq, dat$Counterbalance, mean)
+tapply(dat$Freq, dat$Counterbalance, sd)
