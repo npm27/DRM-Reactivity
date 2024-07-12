@@ -287,3 +287,7 @@ ezANOVA(e.long,
         detailed = T)
 
 tapply(e.long$Score, e.long$Encoding, mean)
+
+e$experiment = rep("2")
+
+#write.csv(e, file = "2 encoding final.csv", row.names = F)

@@ -411,3 +411,6 @@ ezANOVA(e.long,
 
 tapply(e.long$Score, list(e.long$Encoding, e.long$List_Type), mean)
 
+e$experiment = rep("1B")
+
+#write.csv(e, file = "ex1b encoding final.csv", row.names = F)

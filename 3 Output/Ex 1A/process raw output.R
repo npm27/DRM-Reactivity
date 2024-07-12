@@ -116,6 +116,12 @@ dat3.Encoding$Encoding = rep("read")
 
 #write.csv(rbind(dat1.Encoding, dat2.Encoding, dat3.Encoding), file = "Ex1a Encoding.csv", row.names = F)
 
+##get global Judgment RTs
+dat.g = subset(dat2, dat2$Procedure.Shuffle == "JOL1" | dat2$Procedure.Shuffle == "JOL2" | 
+               dat2$Procedure.Shuffle == "JOL3" | dat2$Procedure.Shuffle == "JOL4")
+
+
+
 ####Clean up the data files####
 ##Drop unused columns
 dat = dat[ , -c(2:4, 6:7, 9:10, 12, 20:22, 27:32, 34)]
