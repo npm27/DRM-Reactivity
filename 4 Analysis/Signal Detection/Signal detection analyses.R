@@ -299,6 +299,15 @@ mean(iJOL3$c.1); mean(gJOL3$c.1); mean(Read3$c.1) #.18 vs -0.04 vs 0.16
 sd(iJOL3$dprime); sd(gJOL3$dprime); sd(Read3$dprime) 
 sd(iJOL3$c.1); sd(gJOL3$c.1); sd(Read3$c.1) 
 
+#get CIs
+((sd(iJOL3$dprime) / sqrt(nrow(iJOL3)))) * 1.96
+((sd(gJOL3$dprime) / sqrt(nrow(gJOL3)))) * 1.96
+((sd(Read3$dprime) / sqrt(nrow(Read3)))) * 1.96
+
+((sd(iJOL3$c.1) / sqrt(nrow(iJOL3)))) * 1.96
+((sd(gJOL3$c.1) / sqrt(nrow(gJOL3)))) * 1.96
+((sd(Read3$c.1) / sqrt(nrow(Read3)))) * 1.96
+
 ###d'
 ##ANOVA
 model5 = ezANOVA(ex2_f,
